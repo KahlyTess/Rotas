@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AnimatronicComponent } from './animatronic/animatronic.component';
 import { routing } from "./app.routing";
-import { DetalheRoboComponent } from './detalhe-robo/detalhe-robo.component';
+import {AnimatronicService} from "./animatronic/animatronic.service";
+import { RoboDetalheComponent } from './robo-detalhe/robo-detalhe.component';
 
 
 @NgModule({
@@ -17,15 +17,14 @@ import { DetalheRoboComponent } from './detalhe-robo/detalhe-robo.component';
     HomeComponent,
     LoginComponent,
     AnimatronicComponent,
-    DetalheRoboComponent
+    RoboDetalheComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatSlideToggleModule,
     routing
   ],
-  providers: [],
+  providers: [AnimatronicService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
