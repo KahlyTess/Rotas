@@ -1,1 +1,9 @@
-<p>animatronic works!</p>
+<p>Lista de Animatronics</p>
+
+  <div class="collection">
+      <a class="collection-item active"
+      *ngFor="let animatronics of animatronics"
+      [routerLink]="['/robo', animatronics.id]">
+        {{ animatronics.nome }}
+      </a>
+  </div>
