@@ -9,6 +9,7 @@ import { AnimatronicComponent } from './animatronic/animatronic.component';
 import { routing } from "./app.routing";
 import {AnimatronicService} from "./animatronic/animatronic.service";
 import { RoboDetalheComponent } from './robo-detalhe/robo-detalhe.component';
+import { AnimatronicNaoEncontradoComponent } from './animatronic-nao-encontrado/animatronic-nao-encontrado.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { RoboDetalheComponent } from './robo-detalhe/robo-detalhe.component';
     HomeComponent,
     LoginComponent,
     AnimatronicComponent,
-    RoboDetalheComponent
+    RoboDetalheComponent,
+    AnimatronicNaoEncontradoComponent
   ],
   imports: [
     BrowserModule,

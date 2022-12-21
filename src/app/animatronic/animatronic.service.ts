@@ -26,19 +26,27 @@ export class AnimatronicService {
     ];
   }
 
-  getAnimatronic (id: any){
-      let robos = this.getAnimatronics();
-      for (let i=0; i<robos.length; i++){
-        let robo = robos[i];
-        if (robo.id == id){
-          return robo;
-      }else{
-          return null;
+  getAnimatronic ( id: any ){
+      let pizza = this.getAnimatronics();
+      for (let i=0; i<pizza.length; i++){
+        let sorvete = pizza[i];
+        if (sorvete.id == id){
+          return sorvete;
+        }
       }
+      return null;
     }
 
-  };
-
+    // getNomear ( nome: any ){
+    //   let letra = this.getAnimatronics();
+    //   for (let i=0; i<letra.length; i++){
+    //     let ponto = letra[i];
+    //     if (ponto.nome == nome){
+    //       return ponto;
+    //     }
+    //   }
+    //   return null;
+    // }
 
   constructor() { }
 }
