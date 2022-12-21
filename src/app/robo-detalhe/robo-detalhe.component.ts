@@ -1,7 +1,7 @@
 import { Component, OnInit  } from '@angular/core';
-import {Subscription} from "rxjs";
-import {ActivatedRoute, Router} from "@angular/router";
-import {AnimatronicService} from "../animatronic/animatronic.service";
+import { Subscription } from "rxjs";
+import { ActivatedRoute, Router } from '@angular/router';
+import { AnimatronicService } from "../animatronic/animatronic.service";
 
 @Component({
   selector: 'app-robo-detalhe',
@@ -9,9 +9,9 @@ import {AnimatronicService} from "../animatronic/animatronic.service";
   styleUrls: ['./robo-detalhe.component.css']
 })
 export class RoboDetalheComponent implements OnInit{
-  id!: any;
+  id: any;
   inscricao!: Subscription;
-  robo: any;
+  nome: any;
   animatronic: any;
 
   constructor(
@@ -20,14 +20,35 @@ export class RoboDetalheComponent implements OnInit{
     private animatronicService: AnimatronicService
   ) {}
 
-  ngOnInit(){
-    this.robo = this.animatronicService.getAnimatronics();
-    this.id = this.animatronicService.getAnimatronic();
+   ngOnInit(){
 
     this.inscricao = this.roteador.params.subscribe(
       (params: any) => {
         this.id = params['id'];
+
+       // this.animatronic = this.animatronicService.getAnimatronic({ id: this.id });
+
+              // if(this.id === null ){
+              //   //this.router.navigate(['**']);
+              //   this.animatronic = this.animatronicService.getAnimatronic({ id: this.id });
+              // }
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        // this.inscricao = this.roteador.params.subscribe(
+        //   (params: any) => {
+        //     this.nome = params['nome'];
+
+        //     this.animatronic = this.animatronicService.getNomear({ nome: this.nome });
+        //   });
+
       });
+
+
   }
 
 }
+
+
