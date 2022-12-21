@@ -12,7 +12,7 @@ const APP_ROUTES:Routes =[
   {path: 'login', component: LoginComponent },
   {path: 'robo/:id', component: RoboDetalheComponent },
   {path: 'animatronic', component: AnimatronicComponent },
-  {path: 'naoEncontrado', component: AnimatronicNaoEncontradoComponent  }
+  {path: '**', component: AnimatronicNaoEncontradoComponent  }
 ];
 
 export const routing: ModuleWithProviders<any> = RouterModule.forRoot(APP_ROUTES);

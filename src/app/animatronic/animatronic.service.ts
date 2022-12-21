@@ -28,7 +28,7 @@ export class AnimatronicService {
 
   getAnimatronic ( id: any ){
       let pizza = this.getAnimatronics();
-      for (let i=0; i<pizza.length; i++){
+      for (let i=1; i<pizza.length; i++){
         let sorvete = pizza[i];
         if (sorvete.id == id){
           return sorvete;
