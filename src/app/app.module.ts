@@ -6,10 +6,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AnimatronicComponent } from './animatronic/animatronic.component';
-import { routing } from "./app.routing";
+//import { routing } from "./app.routing";
 import {AnimatronicService} from "./animatronic/animatronic.service";
 import { RoboDetalheComponent } from './robo-detalhe/robo-detalhe.component';
 import { AnimatronicNaoEncontradoComponent } from './animatronic-nao-encontrado/animatronic-nao-encontrado.component';
+import { AppRoutingModule } from './app.routing.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { AnimatronicNaoEncontradoComponent } from './animatronic-nao-encontrado/
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    routing
+    AppRoutingModule
+    //routing
   ],
   providers: [AnimatronicService],
   bootstrap: [AppComponent]

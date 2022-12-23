@@ -17,8 +17,8 @@
     <a routerLink= "" class="brand-logo right"> Rotas Ng2 </a>
     <ul id="nav-mobile" class="left hide-on-med-and-down">
       <li routerLinkActive="active"> <a routerLink= "/login"> Login </a> </li>
-      <li routerLinkActive="active"> <a routerLink= "/animatronic"> Animatronic </a> </li>
-      <li routerLinkActive="active"> <a [routerLink]= "['robo']"> ID Robô </a> </li>
+      <li routerLinkActive="active"> <a routerLink= "/animatronic" [queryParams]="{pagina:1}"> Animatronic </a> </li>
+      <li routerLinkActive="active"> <a [routerLink]= "['robo', idRobo.value]"> ID Robô </a> </li>
     </ul>
   </div>
 </nav>
@@ -32,10 +32,4 @@
 
     <router-outlet></router-outlet>
   </div>
-
-
-
-
-<!--<mat-slide-toggle>Toggle me!</mat-slide-toggle>-->
-
 
