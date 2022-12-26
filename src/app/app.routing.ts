@@ -3,9 +3,9 @@ import {RouterModule, Routes} from '@angular/router'
 
 import {HomeComponent} from "./home/home.component";
 import {LoginComponent} from "./login/login.component";
-import {AnimatronicComponent} from "./animatronic/animatronic.component";
+import {AnimatronicComponent} from "./Animatronicos/animatronic/animatronic.component";
 import {RoboDetalheComponent} from "./robo-detalhe/robo-detalhe.component";
-import { AnimatronicNaoEncontradoComponent } from './animatronic-nao-encontrado/animatronic-nao-encontrado.component';
+import { AnimatronicNaoEncontradoComponent } from './Animatronicos/animatronic-nao-encontrado/animatronic-nao-encontrado.component';
 
 const APP_ROUTES:Routes =[
   {path: '', component: HomeComponent },
