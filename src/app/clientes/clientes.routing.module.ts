@@ -9,11 +9,11 @@ import { ClienteFormComponent } from './cliente-form/cliente-form.component';
 
 
 const clientesRoutes:Routes =[
-  {path: 'clientes', component: ClientesComponent },
-  {path: 'clientes/novo', component: ClienteFormComponent },
-  {path: 'clientes/:id', component: ClienteDetalheComponent },
-  {path: 'clientes/:id/editar', component: ClienteFormComponent }
-
+  {path: 'clientes', component: ClientesComponent, children:[
+      {path: 'novo', component: ClienteFormComponent },
+      {path: ':id', component: ClienteDetalheComponent },
+      {path: ':id/editar', component: ClienteFormComponent }
+  ]}
 ];
 
 export const routing: ModuleWithProviders<any> = RouterModule.forRoot(clientesRoutes);
