@@ -1,7 +1,8 @@
 import { Component, OnInit  } from '@angular/core';
 import { Subscription } from "rxjs";
 import { ActivatedRoute, Router } from '@angular/router';
-import { AnimatronicService } from "../animatronic/animatronic.service";
+
+import { AnimatronicService } from '../animatronic/animatronic.service';
 
 @Component({
   selector: 'app-robo-detalhe',
