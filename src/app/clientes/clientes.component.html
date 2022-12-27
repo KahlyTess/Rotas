@@ -1,4 +1,18 @@
-<p>clientes works!</p>
+<p>
+    Nossos Clientes
+</p>
+
+
+
+<div class="collection">
+  <a class="collection-item active" 
+  *ngFor="let cliente of cliente"
+  [routerLink]="[cliente.id]"> 
+    {{ cliente.nome }} 
+  </a>
+ 
+</div>
+      
 
 
 <router-outlet></router-outlet>
