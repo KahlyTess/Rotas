@@ -27,12 +27,12 @@ export class RoboDetalheComponent implements OnInit{
       (params: any) => {
         this.id = params['id'];
 
-       // this.animatronic = this.animatronicService.getAnimatronic({ id: this.id });
+       //this.animatronic = this.animatronicService.getAnimatronic({ id: this.id });
 
-              // if(this.id === null ){
-              //   //this.router.navigate(['**']);
-              //   this.animatronic = this.animatronicService.getAnimatronic({ id: this.id });
-              // }
+              if(this.id === null ){
+                this.router.navigate(['/robo/**']);
+                this.animatronic = this.animatronicService.getAnimatronic({ id: this.id });
+              }
 
 
 

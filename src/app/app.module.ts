@@ -8,19 +8,21 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 //import { AnimatronicComponent } from './elementos-robo/animatronic/animatronic.component';
 //import { routing } from "./app.routing";
-//import {AnimatronicService} from "./elementos-robo/animatronic/animatronic.service";
+import {AnimatronicService} from "./elementos-robo/animatronic/animatronic.service";
 //import { RoboDetalheComponent } from './elementos-robo/robo-detalhe/robo-detalhe.component';
 //import { AnimatronicNaoEncontradoComponent } from './elementos-robo/animatronic-nao-encontrado/animatronic-nao-encontrado.component';
 import { AppRoutingModule } from './app.routing.module';
 import { ElementosRoboModule } from './elementos-robo/elementos.module';
-import { ClientesModule } from './clientes/clientes.module';
+//import { ClientesModule } from './clientes/clientes.module';
+import { AuthService } from './login/auth.service';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    LoginComponent,
+    //HomeComponent,
+    //LoginComponent,
 
     // AnimatronicComponent,
     // RoboDetalheComponent,
@@ -29,12 +31,16 @@ import { ClientesModule } from './clientes/clientes.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    ElementosRoboModule,
+    //ElementosRoboModule,
     AppRoutingModule,
-    ClientesModule
+    //ClientesModule,
     //routing
   ],
- // providers: [AnimatronicService],
+  //providers: [AnimatronicService],
+  providers: [
+    AuthService,
+    AnimatronicService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
