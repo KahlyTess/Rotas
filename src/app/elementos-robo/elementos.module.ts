@@ -8,18 +8,22 @@ import { RoboDetalheComponent } from './robo-detalhe/robo-detalhe.component';
 import { AnimatronicNaoEncontradoComponent } from './animatronic-nao-encontrado/animatronic-nao-encontrado.component';
 import { AnimatronicService } from './animatronic/animatronic.service';
 import { ElementosRoutingModule } from "./elementos.routing.module";
+import { LoginComponent } from '../login/login.component';
+
 
 @NgModule({
     imports:[
       CommonModule,
-      ElementosRoutingModule
-      //RouterModule
+      ElementosRoutingModule,
+      
+
     ],
     exports:[],
     declarations:[
       AnimatronicComponent,
       RoboDetalheComponent,
       AnimatronicNaoEncontradoComponent,
+      LoginComponent,
     ],
     providers:[AnimatronicService],
 })

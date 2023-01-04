@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+//import { Cliente } from './cliente';
 
 @Injectable({
   providedIn: 'root'
@@ -22,9 +23,9 @@ export class ClientesService {
 
   getClientes(id: number){
     for (let i=0; i<this.cliente.length; ++i){
-      let clientes = this.cliente[1];
-      if(clientes.id === id){
-        return clientes;
+      let pizza = this.cliente[i];
+      if(pizza.id === id){
+        return pizza;
       }
     }
     return null;

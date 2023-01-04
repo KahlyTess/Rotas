@@ -9,16 +9,21 @@ import {LoginComponent} from "./login/login.component";
 //import { AnimatronicNaoEncontradoComponent } from './elementos-robo/animatronic-nao-encontrado/animatronic-nao-encontrado.component';
 
 const APP_ROUTES:Routes =[
-  {path: '', component: HomeComponent },
+  {path: 'Home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule)},
   {path: 'login', component: LoginComponent },
-  //{path: 'robo/:id', component: RoboDetalheComponent },
+  {path: 'animatronic', loadChildren: () => import('./elementos-robo/elementos.module').then(m => m.ElementosRoboModule)},
+  {path: 'clientes', loadChildren: () => import('./clientes/clientes.module').then(m => m.ClientesModule)},
+  {path: 'elementos-robo', loadChildren: () => import('./elementos-robo/elementos.module').then(m => m.ElementosRoboModule)},
+  //   path: 'home', loadChildren: () => import().then(m => m.)
+  // }
+
+  //{path: 'robo/:id', component: RoboDetalheComponent }, 
   //{path: 'animatronic', component: AnimatronicComponent },
-  //{path: 'naoEncontrado', component: AnimatronicNaoEncontradoComponent  }
+  //{path: '**', component: AnimatronicNaoEncontradoComponent }
+
 ];
 
 export const routing: ModuleWithProviders<any> = RouterModule.forRoot(APP_ROUTES);
-
-
 
 @NgModule({
 imports: [RouterModule.forRoot(APP_ROUTES)],

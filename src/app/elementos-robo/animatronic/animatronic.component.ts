@@ -34,7 +34,7 @@ export class AnimatronicComponent implements OnInit{
 
   proximaPagina(){
     this.pagina++;
-    this.router.navigate(['/animatronics']);
+    this.router.navigate(['/robo']);
   }
 
 }

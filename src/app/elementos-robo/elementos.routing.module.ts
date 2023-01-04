@@ -7,9 +7,10 @@ import {RoboDetalheComponent} from "./robo-detalhe/robo-detalhe.component";
 import { AnimatronicNaoEncontradoComponent } from './animatronic-nao-encontrado/animatronic-nao-encontrado.component';
 
 const elementosRoutes:Routes =[
-  {path: 'robo/:id', component: RoboDetalheComponent },
-  {path: 'animatronic', component: AnimatronicComponent },
-  {path: 'naoEncontrado', component: AnimatronicNaoEncontradoComponent  }
+  {path: '', component: AnimatronicComponent },
+  {path: '**', component: AnimatronicNaoEncontradoComponent  },
+  {path: ':id', component: RoboDetalheComponent },
+
 ];
 
 export const routing: ModuleWithProviders<any> = RouterModule.forRoot(elementosRoutes);
